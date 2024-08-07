@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Sets the viewport to make the website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Font Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="to-do">
-            <h2>To Do List <img src = "check.png"></h2>
+            <!-- To Do List title with an image -->
+            <h2>To Do List <img src="check.png" alt="check icon"></h2>
             <div class="row">
-                <input type = "text" id="input-box" placeholder = "Add Text Here...">
+                <!-- Input box for task description -->
+                <input type="text" id="input-box" placeholder="Add Text Here...">
+                <!-- Input box for due date -->
                 <input type="date" id="due-date">
+                <!-- Dropdown for priority selection -->
                 <select id="priority-select">
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
                 </select>
-                <button onclick = "addTask()" > Add </button>
+                <!-- Button to add task -->
+                <button onclick="addTask()">Add</button>
             </div>
-            <ul id ="list-container">
+            <!-- Container for the list of tasks -->
+            <ul id="list-container">
             </ul>
         </div>
     </div>
+    <!-- Link to external JavaScript file -->
     <script src="myscripts.js"></script>
-
 </body>
 </html>
